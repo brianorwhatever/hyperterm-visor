@@ -87,6 +87,12 @@ module.exports = class Visor {
                 bounds.width /= 2;
                 bounds.width = Math.round(bounds.width);
                 break;
+            case 'full':
+                bounds.x = 0;
+                bounds.y = 0;
+                bounds.width = width;
+                bounds.height = height;
+                break;
         }
 
         this.visorWindow.setBounds(bounds);
